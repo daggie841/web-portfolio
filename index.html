@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Douglas — Web Developer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            fade: 'fadeIn 1.2s ease-in-out forwards',
+            slideup: 'slideUp 0.8s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 },
+            }
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Welcome Banner -->
+  <div class="py-3 text-center text-lg font-medium text-gray-900 animate-fade">
+    👋 Welcome to Douglas' Web Services!
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="images/logo.jpg" alt="Douglas Logo" class="h-12 rounded-full shadow">
+        <span class="font-bold text-lg">Douglas</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="#about" class="hover:text-yellow-500 transition">About</a>
+        <a href="#portfolio" class="hover:text-yellow-500 transition">Portfolio</a>
+        <a href="#services" class="hover:text-yellow-500 transition">Services</a>
+        <a href="#contact" class="hover:text-yellow-500 transition">Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-sm animate-fade">
+      <nav class="flex flex-col p-4 space-y-3">
+        <a href="#about" class="hover:text-yellow-500">About</a>
+        <a href="#portfolio" class="hover:text-yellow-500">Portfolio</a>
+        <a href="#services" class="hover:text-yellow-500">Services</a>
+        <a href="#contact" class="hover:text-yellow-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-50 to-white py-20 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <!-- Text -->
+      <div class="flex-1 animate-slideup text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Hello, I’m Douglas  
+          <span class="text-yellow-500">Web Developer & Designer</span>
+        </h1>
+        <p class="text-lg text-gray-700 mb-6">
+          I turn your ideas into high-performance digital experiences that convert visitors into lifelong clients.
+        </p>
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="#portfolio" class="bg-yellow-400 px-6 py-3 rounded-full font-semibold text-gray-900 hover:bg-yellow-300 transition">
+            View My Work
+          </a>
+          <a href="#contact" class="border-2 border-yellow-400 px-6 py-3 rounded-full font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition">
+            Get In Touch
+          </a>
+        </div>
+        <!-- Social -->
+        <div class="flex justify-center md:justify-start gap-6 mt-8">
+          <a href="#" class="hover:scale-110 transition"><i class="fab fa-facebook-f text-2xl text-blue-600"></i></a>
+          <a href="#" class="hover:scale-110 transition"><i class="fab fa-twitter text-2xl text-blue-400"></i></a>
+          <a href="#" class="hover:scale-110 transition"><i class="fab fa-linkedin-in text-2xl text-blue-700"></i></a>
+          <a href="#" class="hover:scale-110 transition"><i class="fab fa-github text-2xl text-gray-800"></i></a>
+          <a href="#" class="hover:scale-110 transition"><i class="fab fa-instagram text-2xl text-pink-500"></i></a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="flex-1 relative">
+        <img src="images/landing.webp" alt="Douglas" class="rounded-xl shadow-lg">
+      </div>
+    </div>
+  </section>
+   <!-- About Section -->
+<section id="about" class="py-20 px-4 bg-gray-100 animate-slideup">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+    <div>
+      <h3 class="text-3xl text-yellow-500 font-bold mb-4">About Me</h3>
+
+      <p class="text-lg mb-4">
+        I'm an IT graduate and ALX-certified full-stack developer passionate about helping people solve real digital problems. With a foundation in both graphic design and software development, I create digital solutions that are not only functional but visually compelling.
+      </p>
+
+      <p class="text-lg mb-4">
+        I work with individuals and businesses to bring ideas to life through custom websites, user-centered applications, and brand-driven visuals. Whether it's launching a product, improving a user journey, or building from the ground up — I focus on results that truly matter.
+      </p>
+
+      <p class="text-lg mb-4">
+        Beyond development, I’m actively involved in mentorship and open-source projects — contributing to a better, more accessible digital world.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white p-6 rounded-lg shadow animate-slideup">
+        <h4 class="font-semibold text-yellow-500 text-xl">Technical Excellence</h4>
+        <p>Crafting scalable, modern web solutions with clean, maintainable code.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow animate-slideup" style="animation-delay: 0.2s; animation-fill-mode: both;">
+        <h4 class="font-semibold text-yellow-500 text-xl">Creative Vision</h4>
+        <p>Combining UI/UX principles with impactful design to elevate digital brands.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow animate-slideup" style="animation-delay: 0.4s; animation-fill-mode: both;">
+        <h4 class="font-semibold text-yellow-500 text-xl">Client-Focused</h4>
+        <p>Collaborating closely with clients to solve problems and exceed expectations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Portfolio Section -->
+<section id="portfolio" class="py-20 px-4 animate-fade">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-yellow-500 text-center mb-12">Featured Work</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- E-Commerce Platform -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/1.PNG" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl text-yellow-500 font-bold mb-2">Generic E-Commerce Platform</h4>
+          <p class="text-gray-700 mb-4">PHP, SQL, JavaScript, CSS</p>
+          <p class="text-sm text-gray-500">+40% Sales | -25% Cart Abandonment</p>
+        </div>
+      </div>
+
+      <!-- Mpeketoni Boys Website -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/2.PNG" alt="Mpeketoni Boys High School Website" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl text-yellow-500 font-bold mb-2">Mpeketoni Boys High School Website</h4>
+          <p class="text-gray-700 mb-4">HTML, PHP, CSS, JavaScript</p>
+          <a href="https://mpeketoniboys.sc.ke/" target="_blank" class="text-sm text-blue-600 hover:underline">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Sikam Farm E-Commerce -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/3.PNG" alt="Sikam Farm Poultry E-Commerce App" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl text-yellow-500 font-bold mb-2">Sikam Farm Poultry E-Commerce</h4>
+          <p class="text-gray-700 mb-4">Laravel, MySQL, Tailwind CSS</p>
+          <a href="https://example.com/sikamfarm" target="_blank" class="text-sm text-blue-600 hover:underline">Visit Application</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Services Section -->
+      <section id="services" class="py-20 px-4 bg-gray-100 animate-slideup">
+        <div class="max-w-6xl mx-auto">
+          <h3 class="text-3xl font-bold text-yellow-500 text-center mb-12">My Services</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Web Development -->
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <!-- Icon -->
+        <div class="flex items-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M3 7h18M3 12h18M3 17h18" />
+          </svg>
+          <h4 class="font-semibold text-yellow-500 text-xl">Web Development</h4>
+        </div>
+
+        <!-- Description -->
+        <p class="mb-4">Modern, responsive, high-performance websites & web apps.</p>
+
+        <!-- Skills list -->
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+          <li>Custom Web Apps</li>
+          <li>M-Pesa Payment Integration</li>
+          <li>Email Integration</li>
+          <li>API Integration</li>
+        </ul>
+      </div>
+
+
+     <!-- UI/UX Design -->
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+  <!-- Icon + Title -->
+  <div class="flex items-center mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    <h4 class="font-semibold text-yellow-500 text-xl">UI/UX Design</h4>
+  </div>
+
+  <!-- Description -->
+  <p class="mb-4">User-first design, wireframes, and prototypes that engage.</p>
+
+  <!-- Skills list -->
+  <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+    <li>Wireframing & Prototyping</li>
+    <li>Responsive Web Design</li>
+    <li>Mobile App UI Design</li>
+    <li>User Journey Mapping</li>
+    <li>Interactive Prototypes</li>
+    <li>Landing Page Design</li>
+    <li>Design System Creation</li>
+    <li>Conversion Rate Optimization</li>
+    <li>Accessibility-Friendly Design</li>
+  </ul>
+</div>
+
+
+      <!-- Brand Identity -->
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+  <!-- Icon + Title -->
+  <div class="flex items-center mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M12 4v16m8-8H4" />
+    </svg>
+    <h4 class="font-semibold text-yellow-500 text-xl">Brand Identity</h4>
+  </div>
+
+  <!-- Description -->
+  <p class="mb-4">Crafting a consistent and memorable visual identity for your business.</p>
+
+  <!-- Skills list -->
+  <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+    <li>Logo Design</li>
+    <li>Color Palette Creation</li>
+    <li>Typography Selection</li>
+    <li>Brand Guidelines Development</li>
+    <li>Business Card & Stationery Design</li>
+    <li>Social Media Branding</li>
+    <li>Packaging Design</li>
+    <li>Brand Story & Messaging</li>
+    <li>Rebranding Strategies</li>
+  </ul>
+</div>
+
+
+      <!-- SEO Optimization -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <h4 class="font-semibold text-yellow-500 text-xl mb-2">SEO Optimization</h4>
+        <p>Boost search engine rankings and increase online visibility.</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
+          <li>Keyword Research</li>
+          <li>On-Page SEO</li>
+          <li>Technical SEO</li>
+          <li>Content Optimization</li>
+          <li>Link Building</li>
+          <li>Analytics & Reporting</li>
+      </div>
+
+      <!-- Website Revamp -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <h4 class="font-semibold text-yellow-500 text-xl mb-2">Website Revamp</h4>
+        <p>Redesign and modernize outdated websites for a fresh look.</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
+          <li>UI/UX Improvements</li>
+          <li>Performance Optimization</li>
+          <li>Mobile Responsiveness</li>
+          <li>Content Migration</li>
+          <li>SEO Enhancements</li>
+          <li>Analytics Setup</li>
+          </ul>
+      </div>
+      <!-- Domain Recovery -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <h4 class="font-semibold text-yellow-500 text-xl mb-2">Domain Recovery</h4>
+        <p>Assist in retrieving and securing lost or expired domains.</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
+          <li>Domain Search & Recovery</li>
+          <li>DNS Management</li>
+          <li>Domain Transfer Assistance</li>
+          <li>WHOIS Privacy Protection</li>
+          <li>Domain Renewal Services</li>
+          <li>Domain Appraisal & Valuation</li>
+      </div>
+
+      <!-- Domain Hosting -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <h4 class="font-semibold text-yellow-500 text-xl mb-2">Domain Hosting</h4>
+        <p>Reliable hosting services to keep your site online 24/7.</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
+          <li>Shared Hosting</li>
+          <li>VPS Hosting</li>
+          <li>Dedicated Servers</li>
+          <li>SSL Certificates</li>
+          <li>Domain Registration</li>
+          <li>24/7 Support</li>
+        </ul>
+      </div>
+
+      <!-- Web Maintenance -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <h4 class="font-semibold text-xl text-yellow-500 mb-2">Web Maintenance</h4>
+        <p>Ongoing support, updates, and performance monitoring.</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
+          <li>Regular Backups</li>
+          <li>Security Monitoring</li>
+          <li>Performance Optimization</li>
+          <li>Content Updates</li>
+          <li>Bug Fixes</li>
+          <li>Analytics Reporting</li>  
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+
+    <!-- Left: Contact Options -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-2xl text-yellow-500 font-bold mb-6">Get in Touch</h3>
+      <ul class="space-y-4">
+        <!-- WhatsApp -->
+        <li class="flex items-center space-x-3">
+          <a href="https://wa.me/254700000000" target="_blank" class="flex items-center space-x-2 hover:text-green-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.04 2C6.49 2 2 6.48 2 12.02c0 2.11.55 4.07 1.51 5.78L2 22l4.34-1.48a10 10 0 005.7 1.68c5.55 0 10.04-4.48 10.04-10.02S17.59 2 12.04 2zm.01 18.27a8.22 8.22 0 01-4.19-1.15l-.3-.18-2.58.88.86-2.52-.19-.32a8.27 8.27 0 1114.48-4.71c0 4.56-3.71 8.26-8.28 8.26z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </li>
+
+        <!-- Email -->
+        <li class="flex items-center space-x-3">
+          <a href="mailto:your@email.com" class="flex items-center space-x-2 hover:text-blue-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16z"/>
+            </svg>
+            <span>Email</span>
+          </a>
+        </li>
+
+        <!-- Call -->
+        <li class="flex items-center space-x-3">
+          <a href="tel:+254700000000" class="flex items-center space-x-2 hover:text-indigo-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79a15.54 15.54 0 006.59 6.59l2.2-2.2a1 1 0 011.1-.21c1.21.48 2.53.73 3.89.73a1 1 0 011 1V20a1 1 0 01-1 1C10.4 21 3 13.6 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.36.25 2.68.73 3.89a1 1 0 01-.21 1.1l-2.4 2.4z"/>
+            </svg>
+            <span>Call</span>
+          </a>
+        </li>
+
+        <!-- SMS -->
+        <li class="flex items-center space-x-3">
+          <a href="sms:+254700000000" class="flex items-center space-x-2 hover:text-purple-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/>
+            </svg>
+            <span>SMS</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-2xl text-yellow-500 font-bold mb-6">Send a Message</h3>
+      <form action="#" method="POST" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium">Your Name</label>
+          <input type="text" id="name" name="name" required
+            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-yellow-500 focus:border-yellow-500">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium">Your Email</label>
+          <input type="email" id="email" name="email" required
+            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-yellow-500 focus:border-yellow-500">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium">Message</label>
+          <textarea id="message" name="message" rows="4" required
+            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+        </div>
+        <button type="submit"
+          class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600">Send</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-yellow-500  text-white py-6 text-center">
+      <p>&copy; 2025 Douglas Njuguna. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
